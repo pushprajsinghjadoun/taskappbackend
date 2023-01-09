@@ -19,6 +19,9 @@ app.options('*', cors());
 //     }
 // })
 
+app.use("/", (req,res)=>{
+    res.json({data : "this is working"})
+})
 
 const auth  = async (req,res,next)=>{
     try {
@@ -209,6 +212,8 @@ app.post('/users/login', async (req, res) => {
         res.status(400).send()
     }
 })
+
+
 
 app.listen(port,()=>{
     console.log("Listening on port"+ port)
