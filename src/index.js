@@ -19,9 +19,6 @@ app.options('*', cors());
 //     }
 // })
 
-app.use("/", (req,res)=>{
-    res.json({data : "this is working"})
-})
 
 const auth  = async (req,res,next)=>{
     try {
